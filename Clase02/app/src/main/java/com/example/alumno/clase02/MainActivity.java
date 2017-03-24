@@ -18,9 +18,14 @@ public class MainActivity extends AppCompatActivity {
         view.setText(R.string.despedir); // O trayendo el texto desde el string.xml
 
         Button boton1 = (Button) findViewById(R.id.id_boton1);
+        Button boton2 = (Button) findViewById(R.id.id_boton2);
+        Button boton3 = (Button) findViewById(R.id.id_boton3);
 
         View.OnClickListener listener = new MyListener();
+
         boton1.setOnClickListener(listener);
+        boton2.setOnClickListener(listener);
+        boton3.setOnClickListener(listener);
     }
 }
 

@@ -35,10 +35,12 @@
 
         <Button
             android:text="Boton 2"
+            android:id="@+id/id_boton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:text="Boton 3"
+            android:id="@+id/id_boton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
