@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IMostrarInfo {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,17 @@ public class MainActivity extends AppCompatActivity {
         Button boton2 = (Button) findViewById(R.id.id_boton2);
         Button boton3 = (Button) findViewById(R.id.id_boton3);
 
-        View.OnClickListener listener = new MyListener();
+        View.OnClickListener listener = new MyListener(this);
 
         boton1.setOnClickListener(listener);
         boton2.setOnClickListener(listener);
         boton3.setOnClickListener(listener);
+    }
+
+   @Override
+    public void mostrarInfo(){
+        TextView tv= (TextView) findViewById(R.id.saludar);
+        tv.setText("Se hizo Click en Btn1");
     }
 }
 
